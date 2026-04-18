@@ -4,277 +4,316 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kit 5 Mini Bands | Treino em Casa</title>
-  <meta name="description" content="Treine em casa com 5 níveis de resistência. Kit leve, portátil e ideal para quem quer começar sem complicação." />
+  <meta name="description" content="Treine em casa com 5 níveis de resistência. Um kit simples, leve e portátil para começar sem complicação." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg:#f7f8fc;
-      --card:#ffffff;
-      --text:#132238;
-      --muted:#5b6b7b;
-      --primary:#ff7a00;
-      --primary-dark:#e56b00;
-      --accent:#1fbf75;
-      --line:#e7ebf1;
-      --shadow:0 12px 30px rgba(19,34,56,.08);
-      --radius:20px;
-      --max:720px;
+    :root {
+      --bg: #f7f8fc;
+      --card: #ffffff;
+      --text: #132238;
+      --muted: #5b6b7b;
+      --primary: #ff7a00;
+      --primary-dark: #e56b00;
+      --accent: #1fbf75;
+      --line: #e7ebf1;
+      --shadow: 0 12px 30px rgba(19,34,56,.08);
+      --radius: 20px;
+      --max: 720px;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:Poppins, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.55;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-      padding-bottom:110px;
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Poppins, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      padding-bottom: 110px;
     }
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:20;
-      background:linear-gradient(135deg, var(--primary), #ff9c3a);
-      color:#fff;
-      text-align:center;
-      padding:12px 16px;
-      font-weight:800;
-      letter-spacing:.2px;
-      box-shadow:0 4px 18px rgba(0,0,0,.12);
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: linear-gradient(135deg, var(--primary), #ff9c3a);
+      color: #fff;
+      text-align: center;
+      padding: 12px 16px;
+      font-weight: 800;
+      box-shadow: 0 4px 18px rgba(0,0,0,.12);
     }
-    .wrap{
-      width:min(100%, var(--max));
-      margin:0 auto;
-      padding:16px;
+
+    .wrap {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 16px;
     }
-    .hero{
-      background:linear-gradient(180deg, #ffffff, #fff7ef);
-      border:1px solid #ffe3c6;
-      border-radius:28px;
-      padding:22px 18px 18px;
-      box-shadow:var(--shadow);
-      overflow:hidden;
+
+    .hero {
+      background: linear-gradient(180deg, #ffffff, #fff7ef);
+      border: 1px solid #ffe3c6;
+      border-radius: 28px;
+      padding: 22px 18px 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
     }
-    .brand{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      font-size:.8rem;
-      font-weight:800;
-      color:var(--primary-dark);
-      background:#fff3e7;
-      border:1px solid #ffd7af;
-      padding:8px 12px;
-      border-radius:999px;
-      margin-bottom:14px;
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .8rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      background: #fff3e7;
+      border: 1px solid #ffd7af;
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
     }
-    h1{
-      font-size:clamp(1.7rem, 5vw, 2.7rem);
-      line-height:1.08;
-      letter-spacing:-.02em;
-      margin-bottom:10px;
+
+    h1 {
+      font-size: clamp(1.7rem, 5vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      margin-bottom: 10px;
     }
-    .sub{
-      color:var(--muted);
-      font-size:1rem;
-      margin-bottom:18px;
+
+    .sub {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 18px;
     }
-    .hero-img{
-      width:100%;
-      display:block;
-      border-radius:22px;
-      box-shadow:0 14px 30px rgba(0,0,0,.10);
-      border:1px solid #eef2f6;
-      background:#fff;
+
+    .hero-img {
+      width: 100%;
+      display: block;
+      border-radius: 22px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.10);
+      border: 1px solid #eef2f6;
+      background: #fff;
+      object-fit: cover;
     }
-    .mini-note{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:14px;
-      color:var(--muted);
-      font-size:.88rem;
+
+    .price-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: #fff7ef;
+      border: 1px dashed #ffc88a;
     }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      background:#eefbf4;
-      color:#0d7a47;
-      padding:8px 12px;
-      border-radius:999px;
-      font-weight:700;
-      border:1px solid #d8f5e4;
+
+    .price-box .price {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--primary-dark);
     }
-    .card{
-      margin-top:16px;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:18px;
+
+    .price-box .tag {
+      font-size: .82rem;
+      color: #9a5b16;
+      font-weight: 700;
+      background: #fff0df;
+      padding: 7px 10px;
+      border-radius: 999px;
     }
-    .section-title{
-      font-size:1.15rem;
-      margin-bottom:10px;
-      letter-spacing:-.01em;
+
+    .mini-note {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .88rem;
     }
-    .benefits{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:12px;
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #eefbf4;
+      color: #0d7a47;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid #d8f5e4;
     }
-    .benefit{
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:14px;
-      background:#fff;
+
+    .card {
+      margin-top: 16px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
     }
-    .check{
-      min-width:28px;
-      width:28px;
-      height:28px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      background:#effaf5;
-      color:var(--accent);
-      font-weight:900;
-      flex-shrink:0;
+
+    .section-title {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      letter-spacing: -.01em;
     }
-    .benefit strong{
-      display:block;
-      margin-bottom:2px;
-      font-size:.98rem;
+
+    .benefits {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
     }
-    .benefit span{
-      color:var(--muted);
-      font-size:.93rem;
+
+    .benefit {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      background: #fff;
     }
-    .how{
-      display:grid;
-      gap:10px;
+
+    .check {
+      min-width: 28px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #effaf5;
+      color: var(--accent);
+      font-weight: 900;
+      flex-shrink: 0;
     }
-    .how-item{
-      border-left:4px solid var(--primary);
-      background:#fffaf3;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid #ffe8cf;
+
+    .benefit strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: .98rem;
     }
-    .how-item strong{
-      display:block;
-      margin-bottom:4px;
+
+    .benefit span {
+      color: var(--muted);
+      font-size: .93rem;
     }
-    .quote{
-      background:linear-gradient(135deg, #132238, #24364d);
-      color:#fff;
-      border-radius:24px;
-      padding:22px;
-      margin-top:16px;
-      box-shadow:var(--shadow);
+
+    .how {
+      display: grid;
+      gap: 10px;
     }
-    .quote p{
-      font-size:1.02rem;
-      line-height:1.7;
+
+    .how-item {
+      border-left: 4px solid var(--primary);
+      background: #fffaf3;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid #ffe8cf;
     }
-    .faq{
-      display:grid;
-      gap:10px;
+
+    .how-item strong {
+      display: block;
+      margin-bottom: 4px;
     }
-    .faq-item{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:14px 16px;
+
+    .quote {
+      background: linear-gradient(135deg, #132238, #24364d);
+      color: #fff;
+      border-radius: 24px;
+      padding: 22px;
+      margin-top: 16px;
+      box-shadow: var(--shadow);
     }
-    .faq-item h3{
-      font-size:1rem;
-      margin-bottom:6px;
+
+    .quote p {
+      font-size: 1.02rem;
+      line-height: 1.7;
     }
-    .faq-item p{
-      color:var(--muted);
-      font-size:.93rem;
+
+    .faq {
+      display: grid;
+      gap: 10px;
     }
-    .footer{
-      text-align:center;
-      color:#91a0b1;
-      font-size:.78rem;
-      padding:18px 0 0;
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px 16px;
     }
-    .cta-fixed{
-      position:fixed;
-      left:0;
-      right:0;
-      bottom:0;
-      z-index:30;
-      background:#fff;
-      border-top:1px solid var(--line);
-      box-shadow:0 -8px 24px rgba(0,0,0,.08);
-      padding:12px 14px 14px;
+
+    .faq-item h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
     }
-    .cta-wrap{
-      width:min(100%, var(--max));
-      margin:0 auto;
+
+    .faq-item p {
+      color: var(--muted);
+      font-size: .93rem;
     }
-    .btn{
-      display:block;
-      width:100%;
-      text-align:center;
-      background:linear-gradient(135deg, var(--accent), #15a965);
-      color:#fff;
-      text-decoration:none;
-      font-weight:800;
-      padding:16px 18px;
-      border-radius:16px;
-      font-size:1.05rem;
-      box-shadow:0 12px 24px rgba(31,191,117,.24);
+
+    .footer {
+      text-align: center;
+      color: #91a0b1;
+      font-size: .78rem;
+      padding: 18px 0 0;
     }
-    .btn:active{transform:scale(.99)}
-    .cta-tip{
-      text-align:center;
-      color:#7c8b9c;
-      font-size:.78rem;
-      margin-top:7px;
+
+    .cta-fixed {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 30;
+      background: #fff;
+      border-top: 1px solid var(--line);
+      box-shadow: 0 -8px 24px rgba(0,0,0,.08);
+      padding: 12px 14px 14px;
     }
-    .price-box{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:14px;
-      padding:14px 16px;
-      border-radius:18px;
-      background:#fff7ef;
-      border:1px dashed #ffc88a;
+
+    .cta-wrap {
+      width: min(100%, var(--max));
+      margin: 0 auto;
     }
-    .price-box .price{
-      font-size:1.4rem;
-      font-weight:900;
-      color:var(--primary-dark);
+
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: linear-gradient(135deg, var(--accent), #15a965);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 16px 18px;
+      border-radius: 16px;
+      font-size: 1.05rem;
+      box-shadow: 0 12px 24px rgba(31,191,117,.24);
     }
-    .price-box .tag{
-      font-size:.82rem;
-      color:#9a5b16;
-      font-weight:700;
-      background:#fff0df;
-      padding:7px 10px;
-      border-radius:999px;
+
+    .btn:active { transform: scale(.99); }
+
+    .cta-tip {
+      text-align: center;
+      color: #7c8b9c;
+      font-size: .78rem;
+      margin-top: 7px;
     }
-    @media (min-width: 720px){
-      .benefits{grid-template-columns:1fr 1fr}
-      .how{grid-template-columns:1fr 1fr}
-      .hero{padding:28px}
-      .card{padding:22px}
+
+    @media (min-width: 720px) {
+      .benefits { grid-template-columns: 1fr 1fr; }
+      .how { grid-template-columns: 1fr 1fr; }
+      .hero { padding: 28px; }
+      .card { padding: 22px; }
     }
   </style>
 </head>
@@ -287,7 +326,11 @@
       <h1>Treine em Casa com <span style="color:var(--primary);">5 Níveis de Resistência</span></h1>
       <p class="sub">Um kit prático para quem quer começar leve, evoluir no próprio ritmo e treinar sem depender de academia.</p>
 
-      <img class="hero-img" src="hero.jpg" alt="Kit 5 mini bands elásticas para treino em casa">
+      <img
+        class="hero-img"
+        src="./hero.JPG"
+        alt="Kit 5 mini bands elásticas para treino em casa"
+      >
 
       <div class="price-box">
         <div>
